@@ -16,10 +16,10 @@ import {
   Radio,
   TextField,
   Typography,
-  Grid,
   FormLabel,
   Paper,
 } from "@mui/material"
+import Grid from "@mui/material/Grid"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import Header from "@/components/header"
@@ -278,7 +278,7 @@ export default function QuestionsPage() {
       case "multiple":
         return (
           <Box sx={{ mt: 3 }}>
-            {currentQuestion.questions.map((q) => (
+            {currentQuestion.questions?.map((q) => (
               <Box key={q.id} sx={{ mb: 4 }}>
                 <FormControl component="fieldset" fullWidth>
                   <FormLabel component="legend" sx={{ mb: 2, fontSize: "1.1rem", fontWeight: 500 }}>
@@ -319,7 +319,7 @@ export default function QuestionsPage() {
         return (
           <Box sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              {currentQuestion.fields.map((field) => (
+              {currentQuestion.fields?.map((field) => (
                 <Grid item xs={12} sm={field.id === "address" ? 12 : 6} key={field.id}>
                   <TextField
                     id={field.id}

@@ -2,7 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Box, Button, Card, CardContent, CardActions, Container, Grid, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, CardActions, Container, Typography } from "@mui/material"
+import Grid from "@mui/material/Grid"
 import { useTheme } from "@mui/material/styles"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
