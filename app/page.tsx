@@ -1,10 +1,16 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Box, Button, Card, CardContent, CardActions, Container, Grid, Typography } from "@mui/material"
+import { useTheme } from "@mui/material/styles"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 export default function Home() {
+  const theme = useTheme()
+  const gradient = `linear-gradient(to bottom, ${theme.palette.primary.light}, ${theme.palette.primary.main})`
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Header />
@@ -13,8 +19,7 @@ export default function Home() {
         <Box
           sx={{
             py: 8,
-            background: (theme) =>
-              `linear-gradient(to bottom, ${theme.palette.primary.light}, ${theme.palette.primary.main})`,
+            background: "linear-gradient(to bottom, #a6c5e1, #7d760691)",
             color: "white",
           }}
         >
@@ -43,7 +48,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/placeholder.svg?height=800&width=1200"
+                  src="/placeholder.jpg?height=800&width=1200"
                   alt="Electronic Paralegal System"
                   fill
                   style={{ objectFit: "cover" }}

@@ -394,14 +394,6 @@ export default function QuestionsPage() {
             )}
           </CardActions>
         </Card>
-
-        {/* Debug panel - remove in production */}
-        {process.env.NODE_ENV === "development" && (
-          <Box sx={{ mt: 4, p: 2, bgcolor: "grey.100", borderRadius: 2 }}>
-            <Typography variant="h6">Debug: Current Answers</Typography>
-            <pre>{JSON.stringify(answers, null, 2)}</pre>
-          </Box>
-        )}
       </Container>
     </Box>
   )
